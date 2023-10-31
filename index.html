@@ -28,23 +28,18 @@
         <link rel="stylesheet" href="path/to/swiper-bundle.min.css">
 
         <style>
-            .swiper-container {
-                width: 100%;
-                height: 450px;
-            }
-            .swiper-slide {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-            }
-            .swiper-slide img {
-                max-width: 200px;   /* images will not exceed this width */
-                max-height: 300px;  /* images will not exceed this height */
-                width: auto;        /* these will maintain the original aspect ratio */
-                height: auto;
+             @media (max-width: 768px) {
+                .swiper-container {
+                    height: auto;
+                    width: 100%;
+                }
+                .swiper-slide img {
+                max-width: 150px;
+                max-height: 225px;
+                }
             }
             .card {
+                margin: 10px;
                 background: #fff;
                 padding: 15px;
                 border-radius: 10px;
@@ -467,7 +462,7 @@
                                     <p><strong>Submission Date:</strong>The deadline is set for the 4th of September, 2023.</p>
                                 </li>
                                 <li>
-                                    <p><strong>Marks for PP1:</strong> PP2 holds weightage of 18% in the overall course evaluation.</p>
+                                    <p><strong>Marks for PP2:</strong> PP2 holds weightage of 18% in the overall course evaluation.</p>
                                 </li>
                             </ul>
                         </div>
@@ -488,7 +483,7 @@
                                     <p><strong>Submission Date:</strong> The deadline is set for the 30th of Octomber, 2023.</p>
                                 </li>
                                 <li>
-                                    <p><strong>Marks for PP1:</strong> The Final Assessment contributes 20% to the course grade.</p>
+                                    <p><strong>Marks for Final Assessment:</strong> The Final Assessment contributes 20% to the course grade.</p>
                                 </li>
                             </ul>
                         </div>
@@ -708,14 +703,15 @@
                     <!-- Include Swiper's JS -->
                     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
                     
-                    <script>
+                    <<script>
                         var swiper = new Swiper('.about-slider', {
-                            slidesPerView: 3,
-                            spaceBetween: 10,
+                            slidesPerView: 3,  // Try changing this value
+                            spaceBetween: 10,  // Try changing this value
                             navigation: {
                                 nextEl: '.swiper-button-next',
                                 prevEl: '.swiper-button-prev',
                             },
+                            
                             pagination: {
                                 el: '.swiper-pagination',
                                 clickable: true,
@@ -725,9 +721,27 @@
                                 delay: 3000,
                                 disableOnInteraction: false,
                             },
-                            effect: 'slide', // You can also use 'slide', 'cube', 'coverflow', or 'flip' 
+                            effect: 'slide', // You can also use 'slide', 'cube', 'coverflow', or 'flip'
+                            // Add breakpoints for responsiveness
+                            breakpoints: {
+                              // when window width is >= 320px
+                              320: {
+                                slidesPerView: 1,
+                                spaceBetween: 10
+                              },
+                              // when window width is >= 480px
+                              480: {
+                                slidesPerView: 2,
+                                spaceBetween: 20
+                              },
+                              // when window width is >= 640px
+                              640: {
+                                slidesPerView: 3,
+                                spaceBetween: 30
+                              }
+                            }
                         });
-                    </script>    
+                    </script>                    
                 </div>
             </section>
 
