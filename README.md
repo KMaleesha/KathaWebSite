@@ -1,3 +1,5 @@
+<h1>Katha App: Sinhala Phonological Disorder Detection and Treatment in Early Childhood</h1>
+
 This is the website that I created for my research to demonstrate the outlines of the project. Discover "Katha," your child's pocket speech pathologist! Analyzing Sinhala speech for ages 2-4, we spot disorders, offer expert feedback, and make language growth a game. 
 
 Please access through the link : https://adorable-moxie-72eba0.netlify.app/
